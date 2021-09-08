@@ -70,6 +70,7 @@ var fight = function(enemyName) {
 };
 
 // fight each enemy-robot by looping over them and fighting them one at a time
+var startGame = function() {
 for (var i = 0; i < enemyNames.length; i++) {
   // if player is still alive, keep fighting
   if (playerHealth > 0) {
@@ -92,5 +93,13 @@ for (var i = 0; i < enemyNames.length; i++) {
   else {
     window.alert('You have lost your robot in battle! Game Over!');
     break;
+    }
   }
-}
+  //play again
+  startGame();
+};
+
+//start the game when the page loads
+startGame();
+
+// ON 3.3.3 of modules
